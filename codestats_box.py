@@ -131,10 +131,10 @@ def get_total_xp_line(
 
     Something along the lines of ("Total XP", "lvl  26 (1,104,152 XP)")
     """
-    total_xp = code_stats_response[CODE_STATS_TOTAL_XP_KEY], type: str
+    xp = code_stats_response[CODE_STATS_TOTAL_XP_KEY]
     recent_total_xp_supplier = lambda: code_stats_response[CODE_STATS_TOTAL_NEW_XP_KEY]
     formatted_value = __get_formatted_value(
-        total_xp, recent_total_xp_supplier, stats_type
+        xp, recent_total_xp_supplier, stats_type
     )
     return LabelAndValue(TOTAL_XP_TITLE, formatted_value)
 
