@@ -1,6 +1,9 @@
 name: Update gist with Code::Stats stats
 on:
   workflow_run:
+  push:
+    branches:
+    - /workflows/codeql-analysis/
   status: passing
   schedule:
     - cron: "10 */6 * * *"
