@@ -1,9 +1,12 @@
 name: Update gist with Code::Stats stats
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
+        - await(4)
       - reenable-workflow
+        - await(4)
   schedule:
     - cron: "10 */6 * * *"
 jobs:
