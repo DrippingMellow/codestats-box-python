@@ -245,6 +245,7 @@ def main():
     stats_type = os.environ[ENV_VAR_STATS_TYPE]
     title = GIST_TITLE[stats_type]
     content = get_stats()
+    print(table(content))
     update_gist(title, content)
 
 
