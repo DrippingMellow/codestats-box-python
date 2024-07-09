@@ -1,8 +1,7 @@
 name: Update gist with Code::Stats stats
 on:
-  check_run:
-      types: [completed]
-      status: [success]
+  workflow_run:
+  status: passing
   schedule:
     - cron: "10 */6 * * *"
 jobs:
