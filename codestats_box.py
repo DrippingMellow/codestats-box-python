@@ -71,7 +71,7 @@ REQUIRED_ENVS = [
 # Code stats API constants
 CODE_STATS_URL_FORMAT = "https://codestats.net/api/users/{user}"
 CODE_STATS_DATE_KEY = "dates"
-CODE_STATS_TOTAL_XP_KEY = "total_xp"
+CODE_STATS_TOTAL_XP_KEY = "xps"
 CODE_STATS_TOTAL_NEW_XP_KEY = "new_xp"
 CODE_STATS_LANGUAGES_KEY = "languages"
 CODE_STATS_LANGUAGES_XP_KEY = "xps"
