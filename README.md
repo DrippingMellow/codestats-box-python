@@ -6,6 +6,10 @@
     <img src="https://github.com/aksh1618/codestats-box-python/workflows/Update%20gist%20with%20Code::Stats%20stats/badge.svg?branch=master" alt="Update gist with Code::Stats stats">
   </p>
 </p>
+<?php form display(text); ?>
+<form>
+  <input type="text" placeholder="loool">
+</form>
 
 ---
 
@@ -74,3 +78,19 @@ pipenv run python codestats_box.py test <codestats-user> <stats-type> <gist-id> 
 # example
 # pipenv run python codestats_box.py test aksh recent-xp ce5221fc5f3739d2c81ce7db99f17519 cf9181618bf1618253d17161843f71a2bb161850
 ```
+
+<?php 
+  require('SimplePHPForm.php'); 
+  
+  $form = new SimplePHPForm();
+  $form->add('name', 'text', '', ['required'], 'Name', '', 'Your name is required.');
+  $form->add('email', 'text', '', ['required', 'email'], 'Email', '', 'Your email is required.');
+
+  if($form->validate()) // Did the form validate successfully?
+  {
+    // Get data: $form->get('name'); ...
+    // Success ! Send an email or register user in a database somewhere...
+    $form->reset(); // Reset to default form.
+  }
+?>
+<?php echo $form->display(); ?>
